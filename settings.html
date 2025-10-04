@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pengaturan · Smart Kasir</title>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+<div class="phone-wrap"><div class="phone">
+<div class="statusbar"><div>Smart Kasir</div><div>🔋 ▪▪▪</div></div>
+<div class="app">
+  <div class="header">
+    <button class="back" onclick="history.back()">←</button>
+    <div class="title">Pengaturan</div>
+    <button class="theme-toggle">🌙</button>
+  </div>
+  <div class="content">
+    
+<div id="settings">
+  <form id="shopForm" class="card">
+    <div class="group"><div class="label">Nama Toko</div><input id="shopName" class="input" required/></div>
+    <div class="group"><div class="label">Nama Pemilik</div><input id="shopOwner" class="input"/></div>
+    <div class="group"><div class="label">Motto/Misi</div><input id="shopMotto" class="input" placeholder="Contoh: UMKM Naik Kelas"/></div>
+    <div class="group"><div class="label">Telepon</div><input id="shopPhone" class="input"/></div>
+    <div class="group"><div class="label">Alamat</div><textarea id="shopAddress" class="textarea"></textarea></div>
+    <div class="group"><div class="label">Mata Uang</div><input id="shopCurrency" class="input" value="Rp"/></div>
+    <div class="group"><div class="label">Promo Harian (%)</div><input id="dailyPromo" class="input" type="number" value="0"/></div>
+    <div class="group"><button class="btn primary block" type="submit">Simpan</button></div>
+  </form>
+  <div style="height:12px"></div>
+  <div class="grid cols-2"><a class="btn ghost" href="settings_printer.html">Printer</a><a class="btn ghost" href="settings_backup.html">Backup/Restore</a></div>
+</div>
+
+  </div>
+  
+    <div class="footer">
+      <a class="nav-btn " href="dashboard.html">Dashboard</a>
+      <a class="nav-btn " href="pos.html">POS</a>
+      <a class="nav-btn " href="products.html">Produk</a>
+      <a class="nav-btn " href="transactions.html">Transaksi</a>
+      <a class="nav-btn " href="reports.html">Laporan</a>
+    </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body></html>

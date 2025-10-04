@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>POS · Smart Kasir</title>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+<div class="phone-wrap"><div class="phone">
+<div class="statusbar"><div>Smart Kasir</div><div>🔋 ▪▪▪</div></div>
+<div class="app">
+  <div class="header">
+    <button class="back" onclick="history.back()">←</button>
+    <div class="title">POS</div>
+    <button class="theme-toggle">🌙</button>
+  </div>
+  <div class="content">
+    
+<div id="pos">
+  <div class="row" style="gap:8px">
+    <input id="search" class="input" placeholder="Cari produk…"/>
+    <div class="group" style="margin:0"><div class="label">Promo (%)</div><input id="promoPct" class="input" type="number" min="0" max="100" value="0" style="width:100px"/></div>
+  </div>
+  <div class="group"><div class="label">Nama Pemesan</div><input id="custName" class="input" placeholder="Opsional, misal: Andi"/></div>
+  <div class="chips" id="chips" style="margin:10px 0"></div>
+  <div id="prodGrid" class="grid cols-2"></div>
+</div>
+<div class="cart">
+  <div class="cart-head row space-between"><b>Keranjang</b><span class="small">Tap + untuk tambah cepat</span></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="card" style="border-radius:0">
+    <div class="row space-between"><div>Gross</div><div id="gross">Rp 0</div></div>
+    <div class="row space-between"><div>Diskon</div><div id="disc">Rp 0</div></div>
+    <div class="row space-between"><div><b>Total</b></div><div id="net"><b>Rp 0</b></div></div>
+  </div>
+  <div class="row" style="padding:12px">
+    <button id="payCash" class="btn primary block">Bayar Tunai</button>
+    <button id="payQRIS" class="btn success block">Bayar QRIS</button>
+  </div>
+</div>
+<div id="payModal" class="modal">
+  <div class="sheet">
+    <div class="row space-between"><b id="payTitle">Pembayaran</b><button class="btn" onclick="closePay()">Tutup</button></div>
+    <div class="group"><div class="label">Total Dibayar</div><div id="payTotal" style="font-size:22px;font-weight:800">Rp 0</div></div>
+    <div id="cashBlock">
+      <div class="group"><div class="label">Uang Diterima</div><input id="cashInput" class="input" placeholder="0" type="number"/></div>
+      <div class="group"><div class="label">Kembalian</div><div id="cashChange" style="font-weight:800">Rp 0</div></div>
+    </div>
+    <div id="qrisBlock" style="display:none"><div class="group"><div class="label">QRIS</div><img id="qrImg" style="width:200px;height:200px"/></div><div class="small">Ref: <span id="qrRef">-</span></div></div>
+    <button class="btn primary block" onclick="finishPay()">Selesaikan</button>
+  </div>
+</div>
+
+  </div>
+  
+    <div class="footer">
+      <a class="nav-btn " href="dashboard.html">Dashboard</a>
+      <a class="nav-btn active" href="pos.html">POS</a>
+      <a class="nav-btn " href="products.html">Produk</a>
+      <a class="nav-btn " href="transactions.html">Transaksi</a>
+      <a class="nav-btn " href="reports.html">Laporan</a>
+    </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body></html>

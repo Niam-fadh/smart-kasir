@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Laporan · Smart Kasir</title>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+<div class="phone-wrap"><div class="phone">
+<div class="statusbar"><div>Smart Kasir</div><div>🔋 ▪▪▪</div></div>
+<div class="app">
+  <div class="header">
+    <button class="back" onclick="history.back()">←</button>
+    <div class="title">Laporan</div>
+    <button class="theme-toggle">🌙</button>
+  </div>
+  <div class="content">
+    
+<div id="reports">
+  <div class="grid cols-2 kpi">
+    <div class="card"><div class="label">Gross</div><div class="num" id="repGross">Rp 0</div></div>
+    <div class="card"><div class="label">Diskon</div><div class="num" id="repDisc">Rp 0</div></div>
+    <div class="card"><div class="label">Net</div><div class="num" id="repNet">Rp 0</div></div>
+    <div class="card"><div class="label">Jumlah Transaksi</div><div class="num" id="repCount">0</div></div>
+  </div>
+  <div style="height:12px"></div>
+  <div class="card"><div class="label">Produk Terlaris</div><div id="topProducts" class="list"></div></div>
+  <div style="height:12px"></div>
+  <div class="card">
+    <div class="row space-between"><div><div class="label">Laporan Bulanan per Hari</div></div><div><input id="monthPick" class="input" type="month"/></div></div>
+    <div style="height:8px"></div>
+    <table id="monthlyTable" border="1" cellpadding="6" style="width:100%;background:#fff">
+      <thead><tr><th>Tanggal</th><th>Tx</th><th>Gross</th><th>Diskon</th><th>Net</th><th>Aksi</th></tr></thead>
+      <tbody id="monthBody"></tbody>
+    </table>
+    <div style="height:8px"></div>
+    <button id="printMonthly" class="btn block">Print Laporan Bulanan</button>
+  </div>
+</div>
+
+  </div>
+  
+    <div class="footer">
+      <a class="nav-btn " href="dashboard.html">Dashboard</a>
+      <a class="nav-btn " href="pos.html">POS</a>
+      <a class="nav-btn " href="products.html">Produk</a>
+      <a class="nav-btn " href="transactions.html">Transaksi</a>
+      <a class="nav-btn active" href="reports.html">Laporan</a>
+    </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body></html>

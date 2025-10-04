@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dashboard · Smart Kasir</title>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+<div class="phone-wrap"><div class="phone">
+<div class="statusbar"><div>Smart Kasir</div><div>🔋 ▪▪▪</div></div>
+<div class="app">
+  <div class="header">
+    <button class="back" onclick="history.back()">←</button>
+    <div class="title">Dashboard</div>
+    <button class="theme-toggle">🌙</button>
+  </div>
+  <div class="content">
+    
+<div id="dashboard">
+  <div class="hero"><div class="row space-between">
+    <div><div class="big">Halo!</div><div class="sub">Toko <b id="shopName">-</b> · <span id="motto"></span></div></div>
+    <button class="btn primary" onclick="go('pos.html')">🧾 Transaksi Baru</button>
+  </div></div>
+  <div class="grid cols-2 kpi" style="margin-top:12px">
+    <div class="card"><div class="label">Gross Hari Ini</div><div class="num" id="kpiGross">Rp 0</div></div>
+    <div class="card"><div class="label">Potongan Diskon</div><div class="num" id="kpiDisc">Rp 0</div></div>
+    <div class="card"><div class="label">Net Diterima</div><div class="num" id="kpiNet">Rp 0</div></div>
+    <div class="card"><div class="label">Jumlah Transaksi</div><div class="num" id="kpiTx">0</div></div>
+  </div>
+  <div class="card" style="margin-top:12px"><div class="label">Produk Kita</div><div id="dashProducts" class="grid cols-2"></div></div>
+  <div class="card" style="margin-top:12px"><div class="label">Menu Cepat</div>
+    <div class="grid cols-2">
+      <a class="btn ghost" href="products.html">📦 Produk</a>
+      <a class="btn ghost" href="reports.html">📊 Laporan</a>
+      <a class="btn ghost" href="transactions.html">🧾 Transaksi</a>
+      <a class="btn ghost" href="settings.html">⚙️ Pengaturan</a>
+    </div></div>
+</div>
+
+  </div>
+  
+    <div class="footer">
+      <a class="nav-btn active" href="dashboard.html">Dashboard</a>
+      <a class="nav-btn " href="pos.html">POS</a>
+      <a class="nav-btn " href="products.html">Produk</a>
+      <a class="nav-btn " href="transactions.html">Transaksi</a>
+      <a class="nav-btn " href="reports.html">Laporan</a>
+    </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body></html>
