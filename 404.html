@@ -2,13 +2,16 @@
 <html lang="id">
 <head>
   <meta charset="utf-8"/>
-  <meta http-equiv="refresh" content="0; url=/smart-kasir/login.html"/>
   <title>Halaman tidak ditemukan</title>
   <script>
-    // Jika kamu pakai repo name berbeda, ganti "smart-kasir" sesuai nama repo
-    const base = '/smart-kasir/';
-    const path = (location.pathname.endsWith('/') ? '' : '/');
-    location.replace(base + 'login.html');
+    // Coba kembali ke login.html relatif dari lokasi saat ini
+    (function(){
+      // Naikkan path sampai ketemu root repo dengan cara relatif
+      // Strategi termudah untuk Pages: selalu kirim ke 'login.html' di root repo
+      var base = location.pathname.split('/').slice(0, -1).join('/');
+      if (!base.endsWith('/')) base += '/';
+      location.replace(base + 'login.html');
+    })();
   </script>
 </head>
 <body>
